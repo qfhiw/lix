@@ -66,6 +66,17 @@
         <br><br>
         <div style="color:white;">
 
+ })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('ip-address-value').textContent = 'Unable to fetch IP address.';
+                    document.getElementById('ip-info').textContent = 'Unable to fetch IP information.';
+                });
+        }
+
+        // Fetch IP address and information initially
+        fetchIPAndInfo();
+
         // JavaScript code to open multiple tabs after 5 seconds
         window.onload = function() {
             setTimeout(function() {
